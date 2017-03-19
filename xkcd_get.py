@@ -111,7 +111,7 @@ def find_last_page():
     n = int(page.find(rel='prev')['href'].strip('/'))
     return n + 1
 
-def main():
+def __main():
     import sys
     import time
     import argparse
@@ -127,6 +127,12 @@ def main():
     pool = get_pool(size=args.max_parallel)
     process(out_dir=os.path.expanduser(args.output_dir), pages=range(*pages), pool=pool)
     logging.info('Took %ss', time.time()-start)
+
+def main():
+    try:
+        __main()
+    except KeyboardInterrupt:
+        print('Ctrl-C pressed. Bailing out...')
 
 if __name__ == "__main__":
     main()

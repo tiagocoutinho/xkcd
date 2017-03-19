@@ -13,8 +13,8 @@ downloader of xkcd comics
 
 ## Usage
 
-    # Downloads all xkcd comics to ~/Downloads/xkcd
+    $ # Downloads all xkcd comics to ~/Downloads/xkcd
     $ xkcd-get
 
-    # Downloads xkcd comics [10..20] to /tmp/xkcd
+    $ # Downloads xkcd comics [10..20] to /tmp/xkcd
     $ xkcd-get --start=10 --end=20 --output-dir=/tmp/xkcd

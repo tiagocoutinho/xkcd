@@ -16,7 +16,7 @@ requirements = [
 
 setup(
     name='xkcd-get',
-    version='0.0.1',
+    version='0.0.2',
     description="downloader of xkcd comics",
     author="Tiago Coutinho",
     author_email='coutinhotiago@gmail.com',

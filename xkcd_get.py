@@ -19,14 +19,14 @@ from requests.exceptions import ConnectionError
 
 from bs4 import BeautifulSoup
 
-__version__ = '0.0.1'
+__version__ = '0.0.2'
 
 name = "xkcd"
 site = 'http://www.{}.com'.format(name)
 
 
 def get_pool(pool=None, size=5):
-    return pool or gevent.pool.Pool(size=size)
+    return gevent.pool.Pool(size=size) if pool is None else pool
 
 def get_url(url, retries=5):
     logging.info("Asking for %s...", url)

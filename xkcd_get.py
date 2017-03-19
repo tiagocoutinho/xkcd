@@ -19,7 +19,7 @@ from requests.exceptions import ConnectionError
 
 from bs4 import BeautifulSoup
 
-__version__ = '0.0.2'
+__version__ = '0.0.3'
 
 name = "xkcd"
 site = 'http://www.{}.com'.format(name)
@@ -116,7 +116,8 @@ def __main():
     import time
     import argparse
     start = time.time()
-    parser = argparse.ArgumentParser(prog='xkcd', description='xkcd downloader')
+    parser = argparse.ArgumentParser(description='xkcd downloader',
+                                     version=__version__)
     parser.add_argument('-o', '--output-dir', default='~/Downloads/xkcd')
     parser.add_argument('-s', '--start-page', default=1, type=int)
     parser.add_argument('-e', '--end-page', default=None, type=int)
